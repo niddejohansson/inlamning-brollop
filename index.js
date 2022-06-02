@@ -6,6 +6,8 @@ let newPhotoButton = document.getElementById('newPhotoButton');
 let snap = document.getElementById('snap');
 let notificationButton = document.getElementById('notificationButton');
 let galleryButton = document.getElementsByClassName('galleryButton');
+const API_KEY_MASTER = '$2b$10$PPY2JA/itrU8vTdugDjMmuUyVF8nBMxLmoeMqNTGcSb3jnZNmTDHq' 
+
 
 let images;
 
@@ -16,7 +18,7 @@ if(localStorage.getItem('cameraApp') != null) {
 }
 
 if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
-    navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+    navigator.mediaDevices.getUserMedia({ video: {width: { ideal: 640}, height: { ideal: 480}}, }).then((stream) => {
         video.srcObject = stream;
         video.play();
     });
@@ -73,8 +75,6 @@ window.addEventListener('load', async () => {
         }
     }
 })
-
-const API_KEY_MASTER = '$2b$10$PPY2JA/itrU8vTdugDjMmuUyVF8nBMxLmoeMqNTGcSb3jnZNmTDHq' 
 
 async function pushImages(){
 
