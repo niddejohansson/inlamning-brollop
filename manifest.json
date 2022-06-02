@@ -1,0 +1,19 @@
+{
+    "name": "Wedding photo",
+    "short_name": "Photo",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "images/camerabutton192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "images/camerabutton.jpg",
+            "type": "image/jpg",
+            "sizes": "512x512"
+        }
+    ]
+}

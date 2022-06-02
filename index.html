@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="images/camerabutton.jpg">
+    <title>Camera</title>
+</head>
+<body>
+    <section class="container">
+        <nav class="navbar">
+            <button class='galleryButton' onclick="window.location.href='gallery.html'"><img src="./images/menubutton.jpg" id="menuButton"></button>
+        </nav>
+        <div id="photoWrapper">
+            <section class="photoArea">
+                <video id="video" height="480" width="640" autoplay style="display: block"></video>
+                <canvas id="previewSnap" height="480" width="640" style="display: none"></canvas>
+            </section>
+        </div>
+        <section class="buttonArea">
+            <button id="snap" style="display: block">FÖREVIGA ETT ÖGONBLICK</button>
+            <button id="newPhotoButton" style="display: none">FÅNGA ETT NYTT ÖGONBLICK</button>
+        </section>
+    </section>
+    
+    <script src="index.js"></script>
+</body>
+</html>
